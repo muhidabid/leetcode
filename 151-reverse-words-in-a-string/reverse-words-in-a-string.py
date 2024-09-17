@@ -5,6 +5,4 @@ class Solution(object):
         :rtype: str
         """
         tokens = s.split()
-        print(tokens)
-
         return " ".join(tokens[::-1])
