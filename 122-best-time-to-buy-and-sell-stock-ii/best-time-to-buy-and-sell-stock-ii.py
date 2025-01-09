@@ -4,10 +4,4 @@ class Solution(object):
         :type prices: List[int]
         :rtype: int
         """
-        tmp_profit = 0
-        i = 0
-        for i in range(len(prices)-1):
-            if prices[i+1] - prices[i] > 0:
-                tmp_profit += prices[i+1] - prices[i]
-
-        return tmp_profit    
+        return sum(prices[i+1] - prices[i] for i in range(len(prices) - 1) if prices[i+1] - prices[i] > 0)
